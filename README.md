@@ -11,7 +11,7 @@
 
 ## Execution guide
 
-Follow these steps to run the scripts for the project
+Follow these steps to run the scripts for the project (takes about 90 minutes with 1 dc2.large node)
 1. Clone the repository
 ```shell
 git clone https://github.com/fsalhani/udacity-data-engineering-project-3.git
@@ -68,3 +68,8 @@ For the `artists`, `songs`, `time` and `users` tables, I avoided duplicates by d
 * Joining the data with the target table to ensure that id has not been inserted yet
 
 For the `songplays` table, I created a query joining both staging tables to get all the information needed. As not all songs appeared in the song_data, I had to use a `LEFT JOIN` instead of an `INNER JOIN` to avoid information loss. This resulted in many entries without a `song_id` or `artist_id`.
+
+
+## [EXTRA] Analytics
+
+To give some example of data analytics that could be performed, I used [Metabase](https://www.metabase.com) with Docker. I followed [their documentation](https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html) to set it up and connected to the recently created Redshift cluster.
