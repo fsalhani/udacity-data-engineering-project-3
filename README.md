@@ -27,7 +27,6 @@ python3 etl.py
 ```
 or run the [run_etl.sh](run_etl.sh) script.
 ```shell
-chmod +x run_etl.sh
 ./run_etl.sh
 ```
 
